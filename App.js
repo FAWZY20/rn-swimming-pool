@@ -1,12 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Button, View, SafeAreaView, Text, Alert } from 'react-native';
 
 export default function App() {
     return ( 
     <View style = { styles.container } >
-        <Button style = { styles.btn }  title="BUTTON" color = "white"/>
-        <StatusBar style = "auto" / >
+      <Button title="BUTTON" onPress={() => Alert.alert('Simple Button pressed')}/>
     </View>
     );
 }
@@ -18,8 +17,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-
-    btn: {
+    Button: {
         backgroundColor: '#2196f3',
     }
 });
